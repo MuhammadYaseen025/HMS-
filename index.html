@@ -22,13 +22,22 @@
       <li><a href="#appointments">Appointments</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button id="themeToggle">Dark Mode</button>
+    <div style="display: flex; align-items: center; gap: 10px;">
+  <button id="themeToggle">Dark Mode</button>
+  <select id="languageSelect">
+    <option value="en">English</option>
+    <option value="ur">Urdu</option>
+    <option value="ar">Arabic</option>
+  </select>
+</div>
+
   </header>
 
-  <section class="hero" id="home">
-    <h2>Welcome to MoM Hospital</h2>
-    <p>Empowering care. Improving lives.</p>
-  </section>
+<section class="hero" id="home">
+  <h2 id="homeHeading">Welcome to MoM Hospital</h2>
+  <p id="homeSubtext">Empowering care. Improving lives.</p>
+</section>
+
 
   <section class="quick-links">
     <a href="#doctors">Meet Our Doctors</a>
@@ -37,10 +46,12 @@
   </section>
 
   <section id="about">
-    <h2>About Us</h2>
-    <p class="center-text">
-      YourHospital is committed to delivering the best healthcare through compassion and advanced technology. Our vision is a healthier community for everyone.
-    </p>
+   <section id="about">
+  <h2 id="aboutHeading">About Us</h2>
+  <p class="center-text" id="aboutText">
+    YourHospital is committed to delivering the best healthcare...
+  </p>
+
 
     <h3 class="center-text">Our Team</h3>
     <div class="team">
@@ -90,9 +101,11 @@
   </section>
 
   <section id="appointments">
-    <h2>Book an Appointment</h2>
+    <h2 id="appointmentHeading">Book an Appointment</h2>
+
     <form id="appointmentForm">
-     <label for="name">Patient Name</label>
+     <label for="name" id="appointmentLabel">Patient Name</label>
+
 <input type="text" id="name" name="name" required />
 
       <input type="number" placeholder="Age" required />
@@ -113,10 +126,38 @@
       <button type="submit">Submit</button>
     </form>
   </section>
+  <section id="doctor-panel">
+  <h2>Doctor Management Panel</h2>
+  <form id="doctorForm">
+    <input type="text" placeholder="Patient Name" required />
+    <select required>
+      <option value="">Select Doctor</option>
+      <option>Dr. Muhammad</option>
+      <option>Dr. Kabeer</option>
+      <option>Dr. Aneela</option>
+      <option>Dr. Sara</option>
+    </select>
+    <input type="date" placeholder="Date of Visit" required />
+    
+    <select id="admissionStatus" required>
+      <option value="">Admission Status</option>
+      <option value="Admitted">Admitted</option>
+      <option value="Discharged">Discharged</option>
+    </select>
+
+    <input type="date" id="admissionDate" placeholder="Admission Date" />
+    <input type="date" id="dischargeDate" placeholder="Discharge Date" />
+    
+    <textarea placeholder="Prescribed Medicines" rows="4" required></textarea>
+    
+    <button type="submit">Submit Report</button>
+  </form>
+</section>
+
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p class="center-text">123 Health Street, Wellness City<br>+123 456 7890<br>info@yourhospital.com</p>
+    <p class="center-text">District Dir Upper Tehsl Wari<br>+923252354414<br>info@MoMhospital.com</p>
 
     <form>
       <input type="text" placeholder="Your Name" required />
@@ -125,14 +166,29 @@
       <button type="submit">Send Message</button>
     </form>
   </section>
+  <section id="gallery">
+  <h2>Our Gallery</h2>
+  <div class="gallery-grid">
+    <img src="pic1.jpg" alt="Hospital view">
+    <img src="pic2.jpg" alt="Ward room">
+    <img src="pic3.jpg" alt="Doctors at work">
+    <img src="pic4.jpg" alt="Surgery room">
+    <img src="pic5.jpg" alt="Reception area">
+    <img src="pic6.webp" alt="Lab and diagnostics">
+    <img src="pic7.jpeg" alt="Lab and diagnostics">
+    <img src="pic8.jpg" alt="Lab and diagnostics">
+  </div>
+</section>
+
 
   <footer>
-    <p>&copy; 2025 YourHospital</p>
+    <p>&copy; 2025 MoMHospital</p>
     <div class="social-icons">
-      <a href="#">LinkedIn</a>
+      <a href="www.linkedin.com/in/muhammad-yaseen-891a28335">LinkedIn</a>
       <a href="#">Facebook</a>
       <a href="#">Twitter</a>
     </div>
+
   </footer>
 
   <script src="script.js"></script>
